@@ -10,6 +10,6 @@
   },
   "scripts": {
     "test": "c8 --reporter=lcov mocha",
-    "coverage": "cat ./coverage/lcov.info | coveralls"
+    "coverage": "c8 --reporter=lcov mocha | coveralls"
   }
 }

@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
+    "c8": "^10.1.2",
     "chai": "^4.5.0",
     "coveralls": "^3.1.1",
     "mocha": "^10.7.3",
@@ -8,7 +9,7 @@
     "nyc": "^17.1.0"
   },
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc --reporter=lcov npm test"
+    "test": "c8 --reporter=lcov mocha",
+    "coverage": "cat ./coverage/lcov.info | coveralls"
   }
 }

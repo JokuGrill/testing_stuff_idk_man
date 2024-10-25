@@ -27,10 +27,15 @@ jobs:
     - run: npm run build --if-present
     # finally run the tests
     - run: npm run test
+  coveralls:
 
-    # Save coverage report in Coveralls
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         path-to-lcov: ./coverage/lcov.info
+    # Save coverage report in Coveralls
+    

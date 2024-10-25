@@ -26,14 +26,4 @@ jobs:
     # build the project if necessary
     - run: npm run build --if-present
     # finally run the tests
-    - name: run tests
-      run: npm run test
-      continue-on-error: true
-
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: ./coverage/lcov.info
-    # Save coverage report in Coveralls
-    
+    - run: npm run test

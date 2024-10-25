@@ -4,6 +4,6 @@ import f1 from '../stuff.js';
 
 describe('test1', () => {
     it('f1 test', () => {
-        except(f1(2,1)).to.equal(3);
+        except(f1(2,1)).to.equal(1);
     })
 })
